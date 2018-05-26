@@ -7,7 +7,7 @@
 
     <body>
         <header>
-            <h1><a href="index.html">자기소개 </a>
+            <h1><a href="index.html">자기소개 </a></h1>
             <img src="치킨.jpg" width="150" height="150">
         </header>
 
@@ -18,25 +18,33 @@
                 <li><a href="codecoach.html">코드코치</a></li>
                 <li><a href="io.html">입출력</a></li>
                 <li><a href="pw.html">비밀번호</a></li>
+                <li><a href="99단.html">99단</a></li>
             </ul>
         </nav>
 
         <article>
-        <script>
-            var password = prompt("비밀번호를_입력하세요.");
-            if(password == "1111"){
-                document.write("hello");
-            }
-            else if(password == "2222"){
-                document.write("bye");
-            }
-            else{
-                document.write("잘못된 비밀번호 입니다.");
-            }
-        </script>
-        </article>
+            <h2>99단</h2>
+            <input type="text" id="dan" style="width:20pt;">
+            단
+           <button onclick="output()">출력하기</button><br><br>
+           <div id="output"></div>
 
-        <footer>
+           <script>
+            function output() {
+                var temp = "";
+                var dan = document.getElementById("dan").value;
+                for(var i=1;i<=9;++i){
+                    temp += dan + "X" + i +"=" +
+                    Number(dan) +Number(i);
+                    temp += "<br />";
+                }
+                document.getElementById("output").
+                  innerHTML = temp;
+
+               }
+          </script>
+        </article>
+       
             <a href="http://google.com">구글</a>
             <a href="http://google.com">네이버</a>
             <a href="http://cafe.naver.com/codecoach">코드코치</a>
